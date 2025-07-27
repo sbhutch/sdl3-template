@@ -26,7 +26,7 @@ SDL_AppResult SDL_AppInit(void** appstate, int argc, char* argv[])
 
     Application* app = SDL_calloc(1, sizeof(Application));
     if (!app) {
-        SDL_Log("Failed to create application");
+        SDL_Log("%s", SDL_GetError());
         return SDL_APP_FAILURE;
     }
     *appstate = app;
